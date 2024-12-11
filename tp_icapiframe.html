@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Application</title>
+</head>
+<body>
+    <div id="iframe-container" style="text-align: center; margin-top: 50px;">
+        <p>Please click the button below to load the application:</p>
+        <button id="load-iframe-button" style="padding: 10px 20px; font-size: 16px;">
+            Load Application
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('load-iframe-button').addEventListener('click', () => {
+            const container = document.getElementById('iframe-container');
+            container.innerHTML = `
+                <iframe
+                    src="https://dev-dot-fantasizr.appspot.com/"
+                    style="width: 100%; height: calc(100vh - 100px); border: none;"
+                    allowfullscreen>
+                </iframe>`;
+        });
+    </script>
+</body>
+</html>
